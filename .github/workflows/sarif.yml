@@ -41,3 +41,8 @@ jobs:
           applicationId: ${{ vars.CONTRAST_APP_ID }}
           ghasEnabled: false
           severity: high
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: contrast.sarif
